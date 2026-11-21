@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="uz" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍢</text></svg>" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kebabo — Milliy Taomlar & Barbeque</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  </head>
+  <body class="bg-slate-950 text-slate-100 min-h-screen">
+    <div id="root">
+      <!-- Fallback message shown ONLY if opened directly as file:/// without server -->
+      <div id="file-protocol-warning" style="display:none; min-height:100vh; background:#020617; color:#f8fafc; font-family:'Plus Jakarta Sans',sans-serif; padding:40px 20px; box-sizing:border-box;">
+        <div style="max-width:600px; margin:40px auto; background:#0f172a; border:2px solid #ea580c; border-radius:24px; padding:32px; text-align:center; box-shadow:0 25px 50px -12px rgba(234,88,12,0.25);">
+          <div style="font-size:48px; margin-bottom:12px;">🍢 🔥</div>
+          <h1 style="font-size:26px; font-weight:900; margin:0 0 8px 0; color:#fff;">KEBABO TIZIMI</h1>
+          <p style="font-size:14px; color:#fdba74; margin:0 0 20px 0; font-weight:600;">Loyiha to'g'ri ishlashi uchun server orqali ochilishi lozim!</p>
+          
+          <div style="background:#1e293b; border-radius:16px; padding:20px; text-align:left; margin-bottom:24px; border:1px solid rgba(255,255,255,0.08);">
+            <p style="font-size:13px; color:#cbd5e1; margin:0 0 10px 0; line-height:1.6;">
+              Brauzerlar xavfsizlik qoidasi tufayli React va zamonaviy web-saytlarni <code style="background:#020617; color:#f97316; padding:2px 6px; border-radius:4px; font-weight:bold;">file:///</code> orqali to'g'ridan-to'g'ri ochganda oq sahifa chiqaradi.
+            </p>
+            <p style="font-size:13px; color:#cbd5e1; margin:0; line-height:1.6;">
+              👉 Saytni 1 soniyada ochish uchun quyidagi tugmani bosing yoki papkadagi <strong style="color:#f97316;">SAYTNI_OCHISH.bat</strong> faylini bosing:
+            </p>
+          </div>
+
+          <a href="http://localhost:5173/" style="display:inline-block; width:100%; box-sizing:border-box; background:linear-gradient(135deg,#ea580c,#f97316,#eab308); color:#fff; text-decoration:none; padding:16px 24px; border-radius:16px; font-weight:800; font-size:16px; box-shadow:0 10px 25px rgba(249,115,22,0.4); margin-bottom:12px; cursor:pointer;">
+            🚀 SAYTNI BRAUZERDA OCHISH (http://localhost:5173/)
+          </a>
+
+          <p style="font-size:11px; color:#94a3b8; margin:8px 0 0 0;">
+            Telefon orqali ochish: <strong style="color:#fdba74;">http://192.168.1.18:5173/</strong>
+          </p>
+        </div>
+      </div>
+      <script>
+        if (window.location.protocol === 'file:') {
+          document.getElementById('file-protocol-warning').style.display = 'block';
+          // Try automatic redirect to localhost server
+          setTimeout(function() {
+            window.location.href = 'http://localhost:5173/';
+          }, 800);
+        }
+      </script>
+    </div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
